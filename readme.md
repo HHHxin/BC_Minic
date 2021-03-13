@@ -1,58 +1,14 @@
-## 1.实现区块结构与区块相关功能
-1. 区块结构分析
-2. 新建区块
-3. 如何进行哈希
-4. 类型转换
-
-## 2. 实现区块链基本结构
-1. 实现链表（通过切片进行缓存）-实现区块链的基本结构
-
-## 3. 实现POW共识算法
-
-## 4. 实现数据可持久化
-1. 修改区块链基本结构
-2. 定义数据库名称和表名称
-3. boltdb基本操作（insert，read）
-
-## 5. 实现区块数据遍历输出
-
-## 6. 实现区块链迭代器管理文件
-
-## 7. 实现命令行
-
-## 8. 实现交易结构
-1. 实现交易结构替换data
-2. 输入结构实现
-3. 输出结构实现
-
-## 9. 实现coinbase交易
-1. coinbase 生成函数实现
-2. 交哈希（序列化）的实现
-3. coinbase 交易生成函数的调用
-4. 实现CLI转账
-
-## 10. 实现json转换成字符
-1. 实现json转换
-
-## 11. 实现挖矿功能
-1. 实现通过挖矿生成新区块
-2. 实现挖矿功能
-3. 通过通过命令行send交易调用挖矿
-
-## 12. 实现UTXO查询与余额查询
-
-## 13. UTXO内部查询
-1. 实现查找数据库指定地址所有已花费输出函数
-2. 实现coinbase交易判断函数
-3. 实现查找指定地址所有UTXO的函数
-
-## 14. UTXO结构的封装
-1. 将所有与output相关的属性封装到一个结构
-2. 修改UTXO查找函数，将返回值改成UTXO结构
-3. 修改getBalance函数调用
-
-## 15. 转账逻辑完善与UTXO查找优化
-1. 实现查找可用UTXO的函数FindSpendableUTXO
-2. 实现通过UTXO查询进行转账，修改NewSimpleTransaction()
-
-## 16. 实现多笔交易
+## windows下运行（命令行）
+项目根目录下  
+* go build -o bc.exe main.go
+## 功能：
+* bc.exe
+    * 查看所有功能
+* bc.exe createblockchain [--address Address]
+    * 创建区块链，并创建coinbase交易，输出地址为Address
+* bc.exe printchain
+    * 打印所有区块链信息
+* bc.exe getbalance -address Address
+    * 查询指定地址Address的余额
+* bc.exe send -from From -to TO -amount AMOUNT
+    * FROM地址向TO地址转账金额AMOUNT，变量格式：from："[\"Alice\",\"Bob\",\"troytan\"]"，可进行多笔交易。

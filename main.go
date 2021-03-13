@@ -2,7 +2,6 @@ package main
 
 import (
 	"bitcoin/BLC"
-	"fmt"
 )
 
 func main() {
@@ -18,11 +17,11 @@ func main() {
 
 	// bc.PrintChain()
 
-	// cli := BLC.CLI{}
-	// cli.Run()
+	cli := BLC.CLI{}
+	cli.Run()
 
-	result := BLC.Base58Encode([]byte("this is the example"))
-	fmt.Printf("result: %s\n", result)
-	result = BLC.Base58Decode([]byte("1nj2SLMErZakmBni8xhSXtimREn"))
-	fmt.Printf("result: %s\n", result)
+	// result := BLC.Base58Encode([]byte("this is the example"))
+	// fmt.Printf("result: %s\n", result)
+	// result = BLC.Base58Decode([]byte("1nj2SLMErZakmBni8xhSXtimREn"))
+	// fmt.Printf("result: %s\n", result)
 }

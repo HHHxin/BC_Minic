@@ -19,7 +19,7 @@ func PrintUsage() {
 	// 初始化
 	fmt.Printf("\tcreateblockchain --address Address -- 创建区块链\n")
 	// 添加区块
-	fmt.Printf("\taddblock --txs Transaction -- 添加区块\n")
+	// fmt.Printf("\taddblock --txs Transaction -- 添加区块\n")
 	// 打印完整的区块信息
 	fmt.Printf("\tprintchain -- 输出区块链信息\n")
 	// 通过命令转账
@@ -106,11 +106,11 @@ func (cli *CLI) Run() {
 	// 添加区块
 	flagAddBlockArg := addBlockCmd.String("data", "sent 100 btc to player", "添加区块")
 	// 创建区块链是指定矿工地址
-	flagCreateBlockchainArg := createBLCWithGenesisBlockCmd.String("address", "troytan", "指定接收系统奖励的矿工地址")
+	flagCreateBlockchainArg := createBLCWithGenesisBlockCmd.String("address", "", "指定接收系统奖励的矿工地址")
 	// 发起交易
-	flagSendFromArg := sendCmd.String("from", "[\"troytan\",\"troytan\",\"troytan\"]", "转账源地址")
-	flagSendToArg := sendCmd.String("to", "[\"aaa\",\"bbb\",\"ccc\"]", "转账目标地址")
-	flagSendAmountArg := sendCmd.String("amount", "[\"1\",\"2\",\"3\"]", "转账金额")
+	flagSendFromArg := sendCmd.String("from", "", "转账源地址")
+	flagSendToArg := sendCmd.String("to", "", "转账目标地址")
+	flagSendAmountArg := sendCmd.String("amount", "", "转账金额")
 	// 查询余额
 	flagGetBalanceArg := getBalanceCmd.String("address", "", "余额")
 
