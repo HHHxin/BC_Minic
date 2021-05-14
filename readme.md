@@ -1,5 +1,6 @@
-## windows下运行（命令行）123
-项目根目录下  123
+## windows下运行（命令行）
+项目根目录下  
+>>>>>>> mydev
 * go build -o bc.exe main.go
 ## 功能：
 * bc.exe
