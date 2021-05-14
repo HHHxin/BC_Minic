@@ -1,4 +1,4 @@
-## windows下运行（命令行）123
+## windows下运行（命令行）
 项目根目录下  
 * go build -o bc.exe main.go
 ## 功能：
